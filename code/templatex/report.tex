@@ -1,0 +1,60 @@
+\documentclass{amsart}
+\synctex=1
+
+%=================================================================
+% 
+\newcount\DraftStatus  % 0 suppresses notes to selves in text
+\DraftStatus=1   % TODO: set to 0 for final version
+%=================================================================
+
+%=================================================================
+\usepackage{comment}
+%=================================================================
+%
+\includecomment{JournalOnly}  
+\includecomment{ConferenceOnly}  
+\includecomment{TulipStyle}
+%
+%=================================================================
+\input{preamble}
+
+
+%=================================================================
+%
+\begin{document}
+%
+%=================================================================
+%
+\title[A Short Running Title]{Bike sharing Demand}%
+
+\author{Pratikshya Parajuli}
+\address[A.~1]{Ministry of Finance,\\ 
+Government of Nepal}%
+\email[A.~1]{misspratiskhya@gmail.com}
+
+%\thanks{Thanks to \ldots}%
+\subjclass{Artificial Intelligence}%
+\date{\gitAuthorDate}%
+
+\input{./tex/abstract}
+
+
+\maketitle
+\tableofcontents
+
+\newpage
+%=================================================================
+
+\input{./tex/mainbody}
+
+% ----------------------------------------------------------------
+\newpage
+\bibliography{tuliplab,yourbib}
+% TODO: you should change this yourbib into a proper bib file name
+\bibliographystyle{plainnat}
+%=================================================================
+
+%\listoftodos
+
+\end{document}
+
